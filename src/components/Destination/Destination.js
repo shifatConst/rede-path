@@ -30,19 +30,31 @@ const Destination = () => {
 
     }
     return (
-        // <RideContext.provider value={[ride, setRide]}>
-            <div className="text-center m-5">
-                <form onSubmit={showRides}>
+        <div className="text-center m-5 border">
+            <form onSubmit={showRides}>
+                <div className="m-3">
+                    <label>Select pickup location</label>
+                    <br />
                     <input onBlur={handleBlur} type="date" name="date" required />
                     <br />
-                    <input onBlur={handleBlur} type="text" name="pick" required />
+                </div>
+
+                <div className="m-3">
+                    <label>Select pickup location</label>
+                    <br />
+                    <input className="" onBlur={handleBlur} type="text" name="pick" required />
+                    <br />
+                </div>
+                <div className="m-3">
+                    <label>Select destination</label>
                     <br />
                     <input onBlur={handleBlur} type="text" name="dest" required />
                     <br />
-                    <input type="submit" value="Search ride" />
-                </form>
-            </div>
-        // </RideContext.provider>
+                </div>
+                <input className="m-1" type="submit" value="Search ride" />
+            </form>
+        </div>
+
     );
 };
 

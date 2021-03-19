@@ -10,8 +10,8 @@ const Home = () => {
     }, [])
     return (
         <div className="container">
-            <h1>Rides: {rides.length} </h1>
-            <div className="row">
+            
+            <div className="row  m-5">
                 {
                     rides.map(ride => <Riders ride={ride}></Riders>)
                 }

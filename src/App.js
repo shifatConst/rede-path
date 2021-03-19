@@ -23,15 +23,16 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      <h1>email: {loggedInUser.email}</h1>
+      {/* <h1>email: {loggedInUser.email}</h1> */}
       <Router>
-        <nav className="navbar navbar-light bg-light justify-content-between">
+        <nav className=" container navbar navbar-light bg-light justify-content-between">
           <Link to="/" className="navbar-brand">Ride Path</Link>
-          <Link to="/home"> Home </Link>
-          <Link to="/destination"> Destination</Link>
-          <Link to="/blog"> Blog </Link>
-          <Link to="/contact"> Contact </Link>
-          <Link to="/login"> Login </Link>
+            <div className="px-5">
+              <Link to="/home"> Home </Link>
+              <Link to="/blog"> Blog </Link>
+              <Link to="/contact"> Contact </Link>
+              <Link to="/login"> Login </Link>
+            </div>
           {loggedInUser.email}
         </nav>
 

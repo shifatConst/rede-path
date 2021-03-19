@@ -127,39 +127,30 @@ function Login() {
 
 
     return (
-        <div style={{ textAlign: 'center' }}>
-            {/* {
-                user.isSignedIn ? <button onClick={handleSignOut}>Sign out</button>
-                    : <button onClick={handleSignIn}>Sign in</button>
-            }
-            <br />
-            <button onClick={handleFbLogin}>Sign in with Facebook</button> */}
-            {/* {
-                user.isSignedIn && <div>
-                    <h3>Welcome, {user.name}</h3>
-                    <p>Your Email: {user.email}</p>
-                    <img src={user.image} alt="" />
-                </div>
-            } */}
-
-            <h1>Please Sign Up</h1>
-            <input type="checkbox" onChange={() => setNewUSer(!newUser)} name="newUser" id="" />
-            <label htmlFor="newUser">New user sign up</label>
-            <form onSubmit={handleSubmit}>
-                {newUser && <input type="text" name="name" onBlur={handleBlur} placeholder="Your name" id="" />}
-                <br />
-                <input type="text" name="email" onBlur={handleBlur} placeholder="Your email" required />
-                <br />
-                <input type="password" name="password" onBlur={handleBlur} placeholder="Your password" required />
-                <br />
-                <input type="submit" value={newUser ? 'Sign up' : 'Log in'} />
-            </form>
-            <p style={{ color: 'red' }}>{user.error}</p>
-            {user.success && <p style={{ color: 'green' }}>User {newUser ? 'created' : 'logged in'} successfully</p>}
-            {
-                user.isSignedIn ? <button onClick={handleSignOut}>Sign out</button>
-                    : <button onClick={handleGoogleSignIn}>Sign in with Google</button>
-            }
+        <div className="text-center m-5">
+            <div className="m-5 border p-5">
+                <h1>Please Sign Up</h1>
+                {/* <input type="checkbox" onChange={() => setNewUSer(!newUser)} name="newUser" id="" />
+                <label htmlFor="newUser">New user sign up</label> */}
+                <form onSubmit={handleSubmit}>
+                    {newUser && <input className="m-1" type="text" name="name" onBlur={handleBlur} placeholder="Your name" id="" />}
+                    <br />
+                    <input className="m-1" type="text" name="email" onBlur={handleBlur} placeholder="Your email" required />
+                    <br />
+                    <input className="m-1" type="password" name="password" onBlur={handleBlur} placeholder="Your password" required />
+                    <br />
+                    <input className="m-1" type="submit" value={newUser ? 'Sign up' : 'Log in'} />
+                </form>
+                <input type="checkbox" onChange={() => setNewUSer(!newUser)} name="newUser" id="" />
+                <label htmlFor="newUser">New user? Sign Up</label>
+                <p style={{ color: 'red' }}>{user.error}</p>
+                {user.success && <p style={{ color: 'green' }}>User {newUser ? 'created' : 'logged in'} successfully</p>}
+                <p><b>Or</b></p>
+                {
+                    user.isSignedIn ? <button onClick={handleSignOut}>Sign out</button>
+                        : <button onClick={handleGoogleSignIn}>Sign in with Google</button>
+                }
+            </div>
         </div>
     );
 }
