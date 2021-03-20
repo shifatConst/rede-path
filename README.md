@@ -6,4 +6,4 @@ Here I implemented registration feature with firebase. You have to register and 
 
 Technologies I used here are: React, Bootstrap, ReactRouter, Firebase and Google map.
 
-[Live link] (https://ride-path.web.app)
+[Live link](https://ride-path.web.app)
