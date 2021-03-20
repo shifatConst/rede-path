@@ -1,17 +1,21 @@
 [{
     "id": 1,
     "ride": "BIKE",
+    "price": "$33",
     "image": "https://i.ibb.co/KF5jB5t/Frame.png"
   }, {
     "id": 2,
     "ride": "CAR",
+    "price": "$45",
     "image": "https://i.ibb.co/PWySYvL/Frame-2.png"
   }, {
     "id": 3,
     "ride": "BUS",
+    "price": "$15",
     "image": "https://i.ibb.co/rQ8CMfK/Frame-1.png"
   }, {
     "id": 4,
     "ride": "TRAIN",
+    "price": "$10",
     "image": "https://i.ibb.co/n70bsbT/Group.png"
   }]

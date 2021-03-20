@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <div className="container">
             
-            <div className="row  m-5">
+            <div className="row m-5">
                 {
                     rides.map(ride => <Riders ride={ride}></Riders>)
                 }

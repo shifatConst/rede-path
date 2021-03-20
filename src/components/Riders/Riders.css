@@ -2,3 +2,9 @@ div img{
     height: 100px;
     width: 100px;
 }
+.card-style{
+    background-color: #3c415c;
+}
+div h2{
+    color: white
+}

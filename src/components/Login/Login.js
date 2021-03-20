@@ -5,6 +5,7 @@ import { useContext, useState } from 'react';
 import reactDom from 'react-dom';
 import { UserContext } from "../../App";
 import { useHistory, useLocation } from "react-router";
+import './Login.css'
 
 if (firebase.apps.length === 0) {
     firebase.initializeApp(firebaseConfig);
@@ -128,10 +129,8 @@ function Login() {
 
     return (
         <div className="text-center m-5">
-            <div className="m-5 border p-5">
+            <div className="m-5 border p-5 login-form-style">
                 <h1>Please Sign Up</h1>
-                {/* <input type="checkbox" onChange={() => setNewUSer(!newUser)} name="newUser" id="" />
-                <label htmlFor="newUser">New user sign up</label> */}
                 <form onSubmit={handleSubmit}>
                     {newUser && <input className="m-1" type="text" name="name" onBlur={handleBlur} placeholder="Your name" id="" />}
                     <br />

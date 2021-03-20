@@ -9,9 +9,9 @@ const Riders = (props) => {
         history.push(`/destination/${id}`)
     }
     return (
-        <div onClick={() => chooseRider(id)} className="col-sm-3 border text-center py-5 my-3">
+        <div onClick={() => chooseRider(id)} className="col-sm-3 border text-center py-5 card-style">
             <img src={image} alt=""/>
-            <h3 className="mt-4">{ride}</h3>
+            <h2 className="mt-4">{ride}</h2>
         </div>
     );
 };

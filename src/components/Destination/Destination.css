@@ -1,0 +1,14 @@
+.ride-img{
+    height: 50px;
+    width: 50px;
+}
+.ride-card{
+    background-color: #ffd384;
+}
+.form-style{
+    border: 1px solid black;
+    background-color: #3c415c;
+}
+.label-style{
+    color: white;
+}
