@@ -14,7 +14,6 @@ import Contact from './components/Contact/Contact';
 import Login from './components/Login/Login';
 import { createContext, useState } from 'react';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
-// import Booking from './components/Booking/Booking';
 
 export const UserContext = createContext();
 
@@ -23,10 +22,8 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-      {/* <h1>email: {loggedInUser.email}</h1> */}
       <Router>
         <nav className="container navbar navbar-expand-lg navbar-light nav-style ">
-          {/* <a class="navbar-brand" href="#">Navbar</a> */}
           <Link to="/" className="navbar-brand brand-style">Ride Path</Link>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
@@ -49,25 +46,6 @@ function App() {
           </div>
           {loggedInUser.name}
         </nav>
-        {/* <nav className=" container navbar navbar-light nav-style justify-content-between">
-          <Link to="/" className="navbar-brand brand-style">Ride Path</Link>
-          <div className="px-5 nav-link-style">
-            <div className="nav-item">
-              <Link to="/home"> Home </Link>
-            </div>
-            <div className="nav-item">
-              <Link to="/blog"> Blog </Link>
-            </div>
-            <div className="nav-item">
-              <Link to="/contact"> Contact </Link>
-            </div>
-            <div className="nav-item">
-              <Link to="/login"> Login </Link>
-            </div>
-
-          </div>
-          {loggedInUser.name}
-        </nav> */}
 
         <Switch>
           <Route exact path="/">

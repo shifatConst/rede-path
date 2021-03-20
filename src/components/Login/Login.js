@@ -29,7 +29,6 @@ function Login() {
     const location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
     const googleProvider = new firebase.auth.GoogleAuthProvider();
-    // const fbProvider = new firebase.auth.FacebookAuthProvider();
     const handleGoogleSignIn = () => {
         var googleProvider = new firebase.auth.GoogleAuthProvider();
         firebase.auth()
@@ -120,7 +119,6 @@ function Login() {
         user.updateProfile({
             displayName: name,
         }).then(function () {
-            console.log('User name updated successfully', user);
         }).catch(function (error) {
             console.log(error);
         });
